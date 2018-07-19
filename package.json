@@ -1,0 +1,14 @@
+{
+  "name": "projectWithBuildingFront",
+  "version": "1.0.0",
+  "description": "I want to learn how working webpack",
+  "main": "index.js",
+  "repository": "https://github.com/VctR477/myNewTestProject.git",
+  "author": "vickli477@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
