@@ -7,6 +7,9 @@ const conf = {
 		filename: 'main.js',
 		publicPath: 'dist/',
 	},
+	devServer: {
+		overlay: true
+	}
 };
 
 module.exports = conf;
