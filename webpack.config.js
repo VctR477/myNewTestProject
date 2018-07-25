@@ -17,12 +17,21 @@ const conf = {
 				loader: 'babel-loader',
 				exclude: '/node_modules/',
 			},
+			{
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					'css-loader'
+				]
+			},
 		]
 	}
 };
 
 module.exports = (env, options) => {
 	const production = options.mode === 'production';
-	conf.devtool = production ? 'source-map' : 'eval-sourcemap';
+	conf.devtool = production
+		? 'source-map'
+		: 'eval-sourcemap';
 	return conf;
 }
