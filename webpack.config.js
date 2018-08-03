@@ -2,11 +2,11 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const conf = {
-	entry: './src/index.js',
+	entry: './src/js/index.js',
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		filename: 'main.js',
-		publicPath: 'dist/',
+		publicPath: './dist/',
 	},
 	devServer: {
 		overlay: true

@@ -2,7 +2,7 @@
   "name": "projectWithBuildingFront",
   "version": "1.0.0",
   "description": "I want to learn how working webpack",
-  "main": "index.js",
+  "main": "/src/js/index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --open",
     "build": "webpack --mode=production"
