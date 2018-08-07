@@ -1,11 +1,16 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const webpack = require('webpack');
 
 const conf = {
-	entry: './src/js/index.js',
+	context: path.resolve(__dirname,'./src/js'),
+	entry: {
+		index: './index.js',
+		second: './second.js'
+	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		filename: 'main.js',
+		filename: '[name].js',
 		publicPath: './dist/',
 	},
 	devServer: {
@@ -22,7 +27,7 @@ const conf = {
 				test: /\.s?css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
+					use: ['css-loader', 'postcss-loader', 'sass-loader']
 				})
 			},
 		]
@@ -35,7 +40,7 @@ const conf = {
 module.exports = (env, options) => {
 	const production = options.mode === 'production';
 	conf.devtool = production
-		? 'source-map'
+		? false
 		: 'eval-sourcemap';
 	return conf;
 }
