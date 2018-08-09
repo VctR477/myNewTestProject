@@ -11,7 +11,7 @@ const conf = {
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		filename: '[name].js',
-		publicPath: './dist/',
+		publicPath: '/dist/',
 	},
 	devServer: {
 		overlay: true
@@ -33,7 +33,7 @@ const conf = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('[name].css', { allChunks: true }),
+		new ExtractTextPlugin('[name].css'),
 	]
 };
 
